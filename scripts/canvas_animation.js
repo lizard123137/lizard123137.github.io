@@ -7,7 +7,7 @@ canvas.width = document.body.clientWidth;
 let particles = []
 let hue = 0;
 
-const maxSize = 2;
+const maxSize = 4;
 const maxSpeed = 2;
 const shrinkRate = 0.02;
 
@@ -21,7 +21,7 @@ window.addEventListener("resize", function(event) {
     canvas.width = document.body.clientWidth;
 });
 
-canvas.addEventListener('mousemove', function(event) {
+window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
 
@@ -65,7 +65,9 @@ function handleParticles() {
 }
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
     handleParticles();
     hue++;
 
