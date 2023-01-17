@@ -1,0 +1,39 @@
+html, body, canvas{
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+}
+
+.container p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+footer p {
+    margin: 0;
+}
+
+.links {
+    bottom: 20px;
+}
+
+.logos {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    filter: invert(32%) sepia(44%) saturate(5921%) hue-rotate(346deg) brightness(99%) contrast(86%);
+}
+
+/*animations*/
+
+.blink {
+    animation: blink 1s infinite forwards ease-in; /*black #000000 to red #eb3434*/
+}
+
+@keyframes blink {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
