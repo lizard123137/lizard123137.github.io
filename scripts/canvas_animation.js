@@ -26,14 +26,22 @@ window.addEventListener('mousemove', function(event) {
     mouse.y = event.y;
 
     for (let i = 0; i < 3; i++) {
-        particles.push(new Particle());
+        particles.push(new Particle(false));
     }
 });
 
 class Particle {
-    constructor() {
-        this.x = mouse.x;
-        this.y = mouse.y;
+    constructor(rand) {
+        if(rand == true) {
+            this.x = Math.random() * window.innerWidth;
+            this.y = Math.random() * window.innerHeight;
+            console.log(this.x,this.y);
+        } else {
+            this.x = mouse.x;
+            this.y = mouse.y;
+            console.log(this.x,this.y);
+        }
+        
         this.size = Math.random() * maxSize + 0.1;
         this.speedX = Math.random() * maxSpeed - 1;
         this.speedY = Math.random() * maxSpeed - 1;
@@ -68,6 +76,8 @@ function animate() {
     ctx.fillStyle = 'rgba(0, 0, 0, .1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    particles.push(new Particle(true));
+
     handleParticles();
     hue++;
 
@@ -76,6 +86,10 @@ function animate() {
     }
 
     requestAnimationFrame(animate);
+}
+
+for (let i = 0; i < 3; i++) {
+    particles.push(new Particle(true));
 }
 
 animate();

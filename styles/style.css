@@ -24,11 +24,29 @@ footer p {
     bottom: 20px;
 }
 
+.links a {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logos {
     width: 70px;
     height: 70px;
     margin-right: 15px;
     filter: invert(32%) sepia(44%) saturate(5921%) hue-rotate(346deg) brightness(99%) contrast(86%);
+    transition: width 0.2s, height 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.logos:hover {
+    width: 100px;
+    height: 100px;
+    filter: invert(100%);
+    transition: width 0.2s, height 0.2s;
+    transition-timing-function: ease-in-out;
 }
 
 /*animations*/
