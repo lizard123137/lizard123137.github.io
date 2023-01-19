@@ -1,7 +1,6 @@
 # My personal website
 
-**This project is still in development.**
-
+**This project is still in development.**  
 Link to the website: [lizard123137.github.io](lizard123137.github.io)
 
 ---
