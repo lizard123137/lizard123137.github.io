@@ -20,6 +20,10 @@ h1 {
     text-align: justify;
 }
 
+footer {
+    background-color: #000;
+}
+
 footer p {
     margin: 0;
 }
@@ -70,6 +74,27 @@ footer p {
     border: 0;
 }
 
+.profile-picture {
+    width: 400px;
+    height: 400px;
+}
+
+/*custom scrollbar*/
+
+::-webkit-scrollbar {
+    position: fixed;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #eb3434;
+    border-radius: 200px;
+}
+
 /*animations*/
 
 .blink {
@@ -80,3 +105,16 @@ footer p {
     from{opacity: 0;}
     to{opacity: 1;}
 }
+
+/*On Mobile*/
+
+@media only screen and (max-width: 600px) {
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+  }
