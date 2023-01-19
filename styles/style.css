@@ -20,6 +20,10 @@ h1 {
     text-align: justify;
 }
 
+footer {
+    background-color: #000;
+}
+
 footer p {
     margin: 0;
 }
